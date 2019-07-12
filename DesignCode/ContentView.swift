@@ -14,7 +14,6 @@ struct ContentView: View {
 
    var body: some View {
       ZStack {
-
          TitleView()
             .blur(radius: show ? 20 : 0)
             .animation(.default)
@@ -81,16 +80,19 @@ struct CertificateView: View {
                   .fontWeight(.bold)
                   .color(Color("accent"))
                   .padding(.top)
+
                Text("Certificate")
                   .color(.white)
             }
             Spacer()
+
             Image("Logo")
                .resizable()
                .frame(width: 30, height: 30)
          }
          .padding(.horizontal)
          Spacer()
+
          Image("Background")
       }
       .frame(width: 340.0, height: 220.0)
@@ -107,9 +109,11 @@ struct TitleView: View {
             Text("Certificates")
                .font(.largeTitle)
                .fontWeight(.heavy)
+
             Spacer()
          }
          Image("Illustration5")
+
          Spacer()
       }.padding()
    }
@@ -122,8 +126,10 @@ struct CardBottomView: View {
             .frame(width: 60, height: 6)
             .cornerRadius(3.0)
             .opacity(0.1)
+
          Text("This certificate is proof that Mithun has achieved UI Design course with approval from a Design+Code instructor.")
             .lineLimit(nil)
+
          Spacer()
       }
       .frame(minWidth: 0, maxWidth: .infinity)
