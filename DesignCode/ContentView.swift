@@ -11,6 +11,7 @@ import SwiftUI
 struct ContentView: View {
 
    @State var show = false
+   @State var viewState = CGSize.zero
 
    var body: some View {
       ZStack {
@@ -31,9 +32,10 @@ struct ContentView: View {
             .rotationEffect(Angle(degrees: show ? 15 : 0))
             .blendMode(.hardLight)
             .animation(.basic(duration: 0.7, curve: .easeInOut))
+            .offset(x: viewState.width, y: viewState.height)
 
          CardView()
-            .background(show ? Color.red : Color("background8"))
+            .background(show ? Color("background5") : Color("background8"))
             .cornerRadius(10)
             .shadow(radius: 20)
             .offset(x: 0, y: show ? -200 : -20)
@@ -41,14 +43,27 @@ struct ContentView: View {
             .rotationEffect(Angle(degrees: show ? 10 : 0))
             .blendMode(.hardLight)
             .animation(.basic(duration: 0.5, curve: .easeInOut))
+            .offset(x: viewState.width, y: viewState.height)
 
          CertificateView()
+            .offset(x: viewState.width, y: viewState.height)
             .scaleEffect(0.95)
             .rotationEffect(Angle(degrees: show ? 5 : 0))
             .animation(.spring())
             .tapAction {
                self.show.toggle()
             }
+            .gesture(
+               DragGesture()
+                  .onChanged { value in
+                     self.viewState = value.translation
+                     self.show = true
+                  }
+                  .onEnded { _ in
+                     self.viewState = CGSize.zero
+                     self.show = false
+                  }
+            )
       }
    }
 }
