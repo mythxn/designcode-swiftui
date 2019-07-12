@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB62172722D870540039BC73 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62172622D870540039BC73 /* Home.swift */; };
 		ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CBE22D74F5700D209BE /* AppDelegate.swift */; };
 		ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC022D74F5700D209BE /* SceneDelegate.swift */; };
 		ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC222D74F5700D209BE /* ContentView.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB62172622D870540039BC73 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ABE07CBB22D74F5700D209BE /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07CBE22D74F5700D209BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07CC022D74F5700D209BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				ABE07CBE22D74F5700D209BE /* AppDelegate.swift */,
 				ABE07CC022D74F5700D209BE /* SceneDelegate.swift */,
 				ABE07CC222D74F5700D209BE /* ContentView.swift */,
+				AB62172622D870540039BC73 /* Home.swift */,
 				ABE07CC422D74F5900D209BE /* Assets.xcassets */,
 				ABE07CC922D74F5900D209BE /* LaunchScreen.storyboard */,
 				ABE07CCC22D74F5900D209BE /* Info.plist */,
@@ -148,6 +151,7 @@
 			files = (
 				ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */,
 				ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */,
+				AB62172722D870540039BC73 /* Home.swift in Sources */,
 				ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
