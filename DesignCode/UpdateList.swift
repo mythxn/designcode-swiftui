@@ -15,23 +15,33 @@ struct UpdateList: View {
    var body: some View {
       NavigationView {
          List(updates) { item in
-            NavigationLink(destination: Text("w2")) {
-               VStack(alignment: .leading) {
-                  Text(item.title)
-                     .font(.headline)
+            NavigationLink(destination: UpdateDetail(title: item.title, text: item.text, image: item.image)) {
+               HStack(spacing: 12.0) {
+                  Image(item.image)
+                     .resizable()
+                     .aspectRatio(contentMode: .fit)
+                     .frame(width: 80, height: 80)
+                     .background(Color("background"))
+                     .cornerRadius(20)
 
-                  Text(item.text)
-                     .lineLimit(2)
-                     .lineSpacing(4)
-                     .frame(height: 50.0)
-                     .font(.subheadline)
+                  VStack(alignment: .leading) {
+                     Text(item.title)
+                        .font(.headline)
 
-                  Text(item.date)
-                     .font(.caption)
-                     .fontWeight(.bold)
-                     .color(.gray)
+                     Text(item.text)
+                        .lineLimit(2)
+                        .lineSpacing(4)
+                        .frame(height: 50.0)
+                        .font(.subheadline)
+
+                     Text(item.date)
+                        .font(.caption)
+                        .fontWeight(.bold)
+                        .color(.gray)
+                  }
                }
             }
+            .padding(.vertical, 8.0)
          }
          .navigationBarTitle(Text("Updates"))
          .navigationBarItems(trailing:
