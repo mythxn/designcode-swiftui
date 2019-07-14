@@ -13,20 +13,37 @@ struct HomeList: View {
    var courses = coursesData
 
    var body: some View {
-      ScrollView(.horizontal, showsIndicators: false) {
-         HStack(spacing: 30.0) {
-            ForEach(courses) { item in
-               PresentationLink(destination: ContentView()) {
-                  CourseView(title: item.title,
-                             image: item.image,
-                             color: item.color,
-                             shadowColor: item.shadowColor)
+      VStack {
+         HStack {
+            VStack(alignment: .leading) {
+               Text("Courses")
+                  .font(.largeTitle)
+                  .fontWeight(.heavy)
+
+               Text("22 Courses")
+                  .color(.gray)
+            }
+            Spacer()
+         }
+         .padding(.leading, 70.0)
+         .padding(.bottom, 40)
+
+         ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 30.0) {
+               ForEach(courses) { item in
+                  PresentationLink(destination: ContentView()) {
+                     CourseView(title: item.title,
+                                image: item.image,
+                                color: item.color,
+                                shadowColor: item.shadowColor)
+                  }
                }
             }
+            .padding(.leading, 40)
+            Spacer()
          }
-         .padding(.leading, 30)
-         Spacer()
       }
+      .padding(.top, 78)
    }
 }
 
@@ -48,10 +65,10 @@ struct CourseView: View {
    var body: some View {
       return VStack(alignment: .leading) {
          Text(title)
-            .font(/*@START_MENU_TOKEN@*/ .title/*@END_MENU_TOKEN@*/)
-            .fontWeight(/*@START_MENU_TOKEN@*/ .bold/*@END_MENU_TOKEN@*/)
+            .font(.title)
+            .fontWeight(.bold)
             .color(.white)
-            .padding(20)
+            .padding(30)
             .lineLimit(4)
             .padding(.trailing, 50)
 
@@ -61,7 +78,7 @@ struct CourseView: View {
             .resizable()
             .renderingMode(.original)
             .aspectRatio(contentMode: .fit)
-            .frame(width: 246, height: 200)
+            .frame(width: 246, height: 150)
             .padding(.bottom, 30)
       }
       .background(color)
