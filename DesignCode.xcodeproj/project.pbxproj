@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1D3B1C22D9CDEF00D0AEA6 /* HomeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1D3B1B22D9CDEF00D0AEA6 /* HomeList.swift */; };
 		AB62172722D870540039BC73 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB62172622D870540039BC73 /* Home.swift */; };
 		ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CBE22D74F5700D209BE /* AppDelegate.swift */; };
 		ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC022D74F5700D209BE /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AB1D3B1B22D9CDEF00D0AEA6 /* HomeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeList.swift; sourceTree = "<group>"; };
 		AB62172622D870540039BC73 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		ABE07CBB22D74F5700D209BE /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07CBE22D74F5700D209BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 				ABE07CC022D74F5700D209BE /* SceneDelegate.swift */,
 				ABE07CC222D74F5700D209BE /* ContentView.swift */,
 				AB62172622D870540039BC73 /* Home.swift */,
+				AB1D3B1B22D9CDEF00D0AEA6 /* HomeList.swift */,
 				ABE07CC422D74F5900D209BE /* Assets.xcassets */,
 				ABE07CC922D74F5900D209BE /* LaunchScreen.storyboard */,
 				ABE07CCC22D74F5900D209BE /* Info.plist */,
@@ -150,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */,
+				AB1D3B1C22D9CDEF00D0AEA6 /* HomeList.swift in Sources */,
 				ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */,
 				AB62172722D870540039BC73 /* Home.swift in Sources */,
 				ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */,
