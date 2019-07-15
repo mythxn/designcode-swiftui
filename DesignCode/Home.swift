@@ -17,7 +17,7 @@ struct Home: View {
       ZStack {
          HomeList()
             .blur(radius: show ? 20 : 0)
-            .scaleEffect(showProfile ? 0.95 : 0)
+            .scaleEffect(showProfile ? 0.95 : 1)
             .animation(.default)
 
          ContentView()
