@@ -21,9 +21,9 @@ struct TabBar: View {
             Text("Certificates")
          }
          .tag(2)
-         UpdateList().tabItem {
+         Settings().tabItem {
             Image("IconSettings")
-            Text("Updates")
+            Text("Settings")
          }
          .tag(3)
       }
