@@ -23,7 +23,7 @@ struct Settings: View {
             Toggle(isOn: $receive) {
                Text("Recieve Notifications")
             }
-            Stepper(value: $number, in: /*@START_MENU_TOKEN@*/1...10/*@END_MENU_TOKEN@*/) {
+            Stepper(value: $number, in: 1...10) {
                Text("\(number) Notification\(number > 1 ? "s" : "") per week")
             }
             Picker(selection: $selection, label: Text("Favourite course")) {

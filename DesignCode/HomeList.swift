@@ -13,37 +13,45 @@ struct HomeList: View {
    var courses = coursesData
 
    var body: some View {
-      VStack {
-         HStack {
-            VStack(alignment: .leading) {
-               Text("Courses")
-                  .font(.largeTitle)
-                  .fontWeight(.heavy)
+      ScrollView {
+         VStack {
+            HStack {
+               VStack(alignment: .leading) {
+                  Text("Courses")
+                     .font(.largeTitle)
+                     .fontWeight(.heavy)
 
-               Text("22 Courses")
-                  .color(.gray)
+                  Text("22 Courses")
+                     .color(.gray)
+               }
+               Spacer()
             }
-            Spacer()
-         }
-         .padding(.leading, 70.0)
-         .padding(.bottom, 40)
+            .padding(.leading, 70.0)
 
-         ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 30.0) {
-               ForEach(courses) { item in
-                  PresentationLink(destination: ContentView()) {
-                     CourseView(title: item.title,
-                                image: item.image,
-                                color: item.color,
-                                shadowColor: item.shadowColor)
+            ScrollView(.horizontal, showsIndicators: false) {
+               HStack(spacing: 30.0) {
+                  ForEach(courses) { item in
+                     PresentationLink(destination: ContentView()) {
+                        GeometryReader { geometry in
+                           CourseView(title: item.title,
+                                      image: item.image,
+                                      color: item.color,
+                                      shadowColor: item.shadowColor)
+                              .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 40) / -20), axis: (x: 0, y: 10.0, z: 0))
+                        }
+                        .frame(width: 246, height: 150)
+                     }
                   }
                }
+               .padding(.leading, 40)
+               .padding(.top, 30)
+               Spacer()
             }
-            .padding(.leading, 40)
-            Spacer()
+            .frame(height: 450)
+            CertificateRow()
          }
+         .padding(.top, 78)
       }
-      .padding(.top, 78)
    }
 }
 
@@ -101,8 +109,20 @@ let coursesData = [
           image: "Illustration1",
           color: Color("background3"),
           shadowColor: Color("backgroundShadow3")),
-   Course(title: "Design Course",
+   Course(title: "Design and animate your UI",
           image: "Illustration2",
           color: Color("background4"),
-          shadowColor: Color("backgroundShadow4"))
+          shadowColor: Color("backgroundShadow4")),
+   Course(title: "Swift UI Advanced",
+          image: "Illustration3",
+          color: Color("background7"),
+          shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
+   Course(title: "Framer Playground",
+          image: "Illustration4",
+          color: Color("background8"),
+          shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
+   Course(title: "Flutter for Designers",
+          image: "Illustration5",
+          color: Color("background9"),
+          shadowColor: Color(hue: 0.677, saturation: 0.701, brightness: 0.788, opacity: 0.5)),
 ]
