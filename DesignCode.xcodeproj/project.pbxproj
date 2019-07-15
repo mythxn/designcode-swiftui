@@ -12,6 +12,7 @@
 		ABB215DC22DB353800424B38 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215DB22DB353800424B38 /* BlurView.swift */; };
 		ABB215DE22DB713300424B38 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215DD22DB713300424B38 /* UpdateList.swift */; };
 		ABB215E022DB7F4700424B38 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215DF22DB7F4700424B38 /* UpdateDetail.swift */; };
+		ABB215E222DC472900424B38 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB215E122DC472900424B38 /* UpdateStore.swift */; };
 		ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CBE22D74F5700D209BE /* AppDelegate.swift */; };
 		ABE07CC122D74F5700D209BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC022D74F5700D209BE /* SceneDelegate.swift */; };
 		ABE07CC322D74F5700D209BE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE07CC222D74F5700D209BE /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 		ABB215DB22DB353800424B38 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		ABB215DD22DB713300424B38 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		ABB215DF22DB7F4700424B38 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		ABB215E122DC472900424B38 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		ABE07CBB22D74F5700D209BE /* DesignCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABE07CBE22D74F5700D209BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ABE07CC022D74F5700D209BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				AB62172622D870540039BC73 /* Home.swift */,
 				ABB215DD22DB713300424B38 /* UpdateList.swift */,
 				ABB215DF22DB7F4700424B38 /* UpdateDetail.swift */,
+				ABB215E122DC472900424B38 /* UpdateStore.swift */,
 				AB1D3B1B22D9CDEF00D0AEA6 /* HomeList.swift */,
 				ABB215DB22DB353800424B38 /* BlurView.swift */,
 				ABE07CC422D74F5900D209BE /* Assets.xcassets */,
@@ -162,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABE07CBF22D74F5700D209BE /* AppDelegate.swift in Sources */,
+				ABB215E222DC472900424B38 /* UpdateStore.swift in Sources */,
 				ABB215DE22DB713300424B38 /* UpdateList.swift in Sources */,
 				AB1D3B1C22D9CDEF00D0AEA6 /* HomeList.swift in Sources */,
 				ABB215E022DB7F4700424B38 /* UpdateDetail.swift in Sources */,
