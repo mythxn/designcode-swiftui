@@ -26,7 +26,7 @@ struct HomeList: View {
                }
                Spacer()
             }
-            .padding(.leading, 70.0)
+            .padding(.leading, 60.0)
 
             ScrollView(.horizontal, showsIndicators: false) {
                HStack(spacing: 30.0) {
@@ -37,17 +37,17 @@ struct HomeList: View {
                                       image: item.image,
                                       color: item.color,
                                       shadowColor: item.shadowColor)
-                              .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 40) / -20), axis: (x: 0, y: 10.0, z: 0))
+                              .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
                         }
-                        .frame(width: 246, height: 150)
+                        .frame(width: 246, height: 360)
                      }
                   }
                }
-               .padding(.leading, 40)
+               .padding(.leading, 30)
                .padding(.top, 30)
+               .padding(.bottom, 70)
                Spacer()
             }
-            .frame(height: 450)
             CertificateRow()
          }
          .padding(.top, 78)
