@@ -89,7 +89,7 @@ struct CardView: View {
 
 struct CertificateView: View {
 
-   var item = Certificate(title: "UI Design", image: "Logo", width: 340, height: 220)
+   var item = Certificate(title: "UI Design", image: "Certificate1", width: 340, height: 220)
 
    var body: some View {
       return VStack {
