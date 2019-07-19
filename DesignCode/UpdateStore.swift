@@ -10,11 +10,11 @@ import Combine
 import SwiftUI
 
 class UpdateStore: BindableObject {
-   var didChange = PassthroughSubject<Void, Never>()
+   var willChange = PassthroughSubject<Void, Never>()
 
    var updates: [Update] {
       didSet {
-         didChange.send()
+         willChange.send()
       }
    }
 

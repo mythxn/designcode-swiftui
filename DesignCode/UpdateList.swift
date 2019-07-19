@@ -47,7 +47,7 @@ struct UpdateList: View {
                         Text(item.date)
                            .font(.caption)
                            .fontWeight(.bold)
-                           .color(.gray)
+                           .foregroundColor(.gray)
                      }
                   }
                }

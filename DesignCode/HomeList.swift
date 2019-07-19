@@ -11,6 +11,7 @@ import SwiftUI
 struct HomeList: View {
 
    var courses = coursesData
+   @State var showContent = false
 
    var body: some View {
       ScrollView {
@@ -22,7 +23,7 @@ struct HomeList: View {
                      .fontWeight(.heavy)
 
                   Text("22 Courses")
-                     .color(.gray)
+                     .foregroundColor(.gray)
                }
                Spacer()
             }
@@ -31,13 +32,15 @@ struct HomeList: View {
             ScrollView(.horizontal, showsIndicators: false) {
                HStack(spacing: 30.0) {
                   ForEach(courses) { item in
-                     PresentationLink(destination: ContentView()) {
+                     Button(action: { self.showContent.toggle() }) {
                         GeometryReader { geometry in
                            CourseView(title: item.title,
                                       image: item.image,
                                       color: item.color,
                                       shadowColor: item.shadowColor)
-                              .rotation3DEffect(Angle(degrees: Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
+                              .rotation3DEffect(Angle(degrees:
+                                 Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
+                              .sheet(isPresented: self.$showContent) { ContentView() }
                         }
                         .frame(width: 246, height: 360)
                      }
@@ -75,7 +78,7 @@ struct CourseView: View {
          Text(title)
             .font(.title)
             .fontWeight(.bold)
-            .color(.white)
+            .foregroundColor(.white)
             .padding(30)
             .lineLimit(4)
             .padding(.trailing, 50)

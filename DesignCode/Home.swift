@@ -27,12 +27,12 @@ struct Home: View {
             .frame(minWidth: 0, maxWidth: 712)
             .cornerRadius(30)
             .shadow(radius: 20)
-            .animation(.fluidSpring())
+            .animation(.spring())
             .offset(y: showProfile ? statusBarHeight + 40 : UIScreen.main.bounds.height)
 
          MenuButton(show: $show)
             .offset(x: -40, y: showProfile ? statusBarHeight : 80)
-            .animation(.fluidSpring())
+            .animation(.spring())
 
          MenuRight(show: $showProfile)
             .offset(x: -16, y: showProfile ? statusBarHeight : 88)
@@ -66,7 +66,7 @@ struct MenuRow: View {
 
          Text(text)
             .font(.headline)
-            .color(.primary)
+            .foregroundColor(.primary)
 
          Spacer()
       }
@@ -91,14 +91,16 @@ struct MenuView: View {
 
    var menu = menuData
    @Binding var show: Bool
+   @State var showSettings = false
 
    var body: some View {
       return HStack {
          VStack(alignment: .leading) {
             ForEach(menu) { item in
                if item.title == "Settings" {
-                  PresentationLink(destination: Settings()) {
+                  Button(action: { self.showSettings.toggle() }) {
                      MenuRow(image: item.icon, text: item.title)
+                        .sheet(isPresented: self.$showSettings) { Settings() }
                   }
                } else {
                   MenuRow(image: item.icon, text: item.title)
@@ -114,7 +116,7 @@ struct MenuView: View {
          .padding(.trailing, 60)
          .shadow(radius: 20)
          .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10.0, z: 0))
-         .animation(.basic())
+         .animation(.default)
          .offset(x: show ? 0 : -UIScreen.main.bounds.width)
          .tapAction {
             self.show.toggle()
@@ -167,6 +169,7 @@ struct MenuButton: View {
 struct MenuRight: View {
 
    @Binding var show: Bool
+   @State var showUpdate = false
 
    var body: some View {
       return ZStack(alignment: .topTrailing) {
@@ -174,8 +177,9 @@ struct MenuRight: View {
             Button(action: { self.show.toggle() }) {
                CircleButton(icon: "person.crop.circle")
             }
-            PresentationLink(destination: UpdateList()) {
+            Button(action: { self.showUpdate.toggle() }) {
                CircleButton(icon: "bell")
+                  .sheet(isPresented: self.$showUpdate) { UpdateList() }
             }
          }
          Spacer()

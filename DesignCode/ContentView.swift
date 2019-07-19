@@ -33,7 +33,7 @@ struct ContentView: View {
             .scaleEffect(0.85)
             .rotationEffect(Angle(degrees: show ? 15 : 0))
             .blendMode(.hardLight)
-            .animation(.basic(duration: 0.7, curve: .easeInOut))
+            .animation(.easeInOut(duration: 0.6))
             .offset(x: viewState.width, y: viewState.height)
 
          CardView()
@@ -44,7 +44,7 @@ struct ContentView: View {
             .scaleEffect(0.9)
             .rotationEffect(Angle(degrees: show ? 10 : 0))
             .blendMode(.hardLight)
-            .animation(.basic(duration: 0.5, curve: .easeInOut))
+            .animation(.easeInOut(duration: 0.4))
             .offset(x: viewState.width, y: viewState.height)
 
          CertificateView()
@@ -98,11 +98,11 @@ struct CertificateView: View {
                Text(item.title)
                   .font(.headline)
                   .fontWeight(.bold)
-                  .color(Color("accent"))
+                  .foregroundColor(Color("accent"))
                   .padding(.top)
 
                Text("Certificate")
-                  .color(.white)
+                  .foregroundColor(.white)
             }
             Spacer()
 

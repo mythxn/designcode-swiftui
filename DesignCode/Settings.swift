@@ -30,9 +30,9 @@ struct Settings: View {
                Text("SwiftUI").tag(1)
                Text("React").tag(2)
             }
-            DatePicker($date) {
+            DatePicker(selection: $date, label: {
                Text("Date")
-            }
+            })
             Section(header: Text("Email")) {
                TextField("Your email: ", text: $email)
                   .textFieldStyle(.roundedBorder)
@@ -40,7 +40,7 @@ struct Settings: View {
             Button(action: { self.submit.toggle() }) {
                Text("Submit")
             }
-            .presentation($submit, alert: {
+            .alert(isPresented: $submit, content: {
                Alert(title: Text("Thanks"), message: Text("Email: \(email)"))
             })
          }
