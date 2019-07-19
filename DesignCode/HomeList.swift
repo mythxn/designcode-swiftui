@@ -81,7 +81,6 @@ struct CourseView: View {
             .foregroundColor(.white)
             .padding(30)
             .lineLimit(4)
-            .padding(.trailing, 50)
 
          Spacer()
 
