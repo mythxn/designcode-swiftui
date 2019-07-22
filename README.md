@@ -1,6 +1,7 @@
 # DesignCode
 
 ![N](https://i.imgur.com/N9HfWdD.png)
+![W](https://github.com/mythxn/DesignCode-SwiftUI/blob/master/preview.gif)
 
 DesignCode is an app fully built using Apple's latest SwiftUI and Combine framework.
 
