@@ -119,7 +119,7 @@ struct MenuView: View {
          .rotation3DEffect(Angle(degrees: show ? 0 : 60), axis: (x: 0, y: 10.0, z: 0))
          .animation(.default)
          .offset(x: show ? 0 : -UIScreen.main.bounds.width)
-         .tapAction {
+         .onTapGesture {
             self.show.toggle()
          }
          Spacer()

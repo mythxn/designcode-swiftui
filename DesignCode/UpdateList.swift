@@ -11,7 +11,7 @@ import SwiftUI
 struct UpdateList: View {
 
    var updates = updateData
-   @ObjectBinding var store = UpdateStore(updates: updateData)
+   @ObservedObject var store = UpdateStore(updates: updateData)
 
    func addUpdate() {
       store.updates.append(Update(image: "Certificate1", title: "New Title", text: "New Text", date: "JUL 1"))

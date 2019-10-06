@@ -52,7 +52,7 @@ struct ContentView: View {
             .scaleEffect(0.95)
             .rotationEffect(Angle(degrees: show ? 5 : 0))
             .animation(.spring())
-            .tapAction {
+            .onTapGesture {
                self.show.toggle()
             }
             .gesture(

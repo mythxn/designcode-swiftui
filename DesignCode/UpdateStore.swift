@@ -9,7 +9,7 @@
 import Combine
 import SwiftUI
 
-class UpdateStore: BindableObject {
+class UpdateStore: ObservableObject {
    var willChange = PassthroughSubject<Void, Never>()
 
    var updates: [Update] {
