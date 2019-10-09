@@ -17,7 +17,7 @@ struct Home: View {
    @State var showProfile = false
 
    var body: some View {
-      ZStack {
+      ZStack(alignment: .top) {
          HomeList()
             .blur(radius: show ? 20 : 0)
             .scaleEffect(showProfile ? 0.95 : 1)
@@ -30,12 +30,16 @@ struct Home: View {
             .animation(.spring())
             .offset(y: showProfile ? statusBarHeight + 40 : UIScreen.main.bounds.height)
 
-         MenuButton(show: $show)
-            .offset(x: -40, y: showProfile ? statusBarHeight : 80)
-            .animation(.spring())
+         HStack {
+             MenuButton(show: $show)
+                .offset(x: -40)
+                 Spacer()
 
-         MenuRight(show: $showProfile)
-            .offset(x: -16, y: showProfile ? statusBarHeight : 88)
+             MenuRight(show: $showProfile)
+                .offset(x: -16)
+         }
+         .offset(y: showProfile ? statusBarHeight : 80)
+         .animation(.spring())
 
          MenuView(show: $show)
       }
