@@ -35,7 +35,7 @@ struct Settings: View {
             })
             Section(header: Text("Email")) {
                TextField("Your email: ", text: $email)
-                  .textFieldStyle(.roundedBorder)
+                  .textFieldStyle(RoundedBorderTextFieldStyle())
             }
             Button(action: { self.submit.toggle() }) {
                Text("Submit")
